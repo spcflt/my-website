@@ -3,16 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Landing Page</title>
+    <title>Erik James Osgood</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Connect with Erik. Find my LinkedIn, GitHub, and more.">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph (for LinkedIn, Facebook, etc.) -->
+    <meta property="og:title" content="Erik - Networking">
+    <meta property="og:description" content="Find my professional profile and get in touch.">
+    <meta property="og:image" content="https://yourwebsite.com/yourimage.jpg"> <!-- Replace with your image URL -->
+    <meta property="og:url" content="https://www.linkedin.com/in/erikosgood/">
+
+    <!-- Styles -->
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        a { display: block; margin: 10px; font-size: 20px; text-decoration: none; }
+        /* General page styling */
+        body {
+            font-family: Helvetica, Arial, sans-serif; /* Change font here */
+            background-color: #f4f4f4; /* Change background color */
+            color: #333; /* Change text color */
+            text-align: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin: auto;
+        }
+
+        /* Profile image */
+        .profile-img {
+            width: 120px; /* Adjust profile image size */
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* Heading */
+        h1 {
+            font-size: 26px; /* Adjust name font size */
+            margin-bottom: 10px;
+        }
+
+        /* Subtitle */
+        p {
+            font-size: 18px; /* Adjust subtitle font size */
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Link buttons */
+        .link-button {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 10px auto;
+            padding: 12px;
+            font-size: 18px; /* Adjust button font size */
+            text-decoration: none;
+            color: white;
+            background: #0077cc; /* Change button color */
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .link-button:hover {
+            background: #005fa3; /* Change hover color */
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>Check out my links below:</p>
-    <a href="https://www.linkedin.com/in/YOURNAME/" target="_blank">LinkedIn</a>
-    <a href="https://github.com/YOURUSERNAME" target="_blank">GitHub</a>
+
+    <div class="container">
+        <!-- Profile Image (Replace with your actual image URL) -->
+        <img src="https://yourwebsite.com/profile.jpg" alt="Your Name" class="profile-img">
+
+        <!-- Name & Title -->
+        <h1>Your Name</h1>
+        <p>Software Engineer | Off-Road Enthusiast | Networking</p> <!-- Change description -->
+
+        <!-- Links -->
+        <a href="https://www.linkedin.com/in/YOURNAME/" target="_blank" class="link-button">LinkedIn</a>
+        <a href="https://github.com/YOURUSERNAME" target="_blank" class="link-button">GitHub</a>
+        <a href="mailto:your.email@example.com" class="link-button">Email Me</a>
+
+        <!-- Optional Footer -->
+        <div class="footer">
+            <p>© 2025 Your Name | Built with ❤️</p>
+        </div>
+    </div>
+
 </body>
 </html>
