@@ -19,12 +19,10 @@
     <style>
         /* General page styling */
         body {
-            font-family: Helvetica, Arial, sans-serif; /* Change font here */
-            background-color: #f4f4f4; /* Change background color */
-            color: #333; /* Change text color */
-            text-align: center;
-            padding: 40px;
-            margin: 0;
+            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/memphis-mini-dark.png') repeat;
+            background-size: cover;
+            background-color: black; /* Fallback in case the image doesn't load */
+            color: white; /* Ensures text is readable */
         }
 
         /* Container for content */
@@ -38,11 +36,11 @@
         }
 
         /* Profile image */
-       .profile-img {
-            width: 160px; /* Adjust width */
-            height: 200px; /* 4:5 aspect ratio (example: 160px wide x 200px tall) */
+        .profile-img {
+            width: 200px; /* Set width */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 0; /* Square edges */
-            object-fit: cover; /* Ensures it fills the area properly */
+            object-fit: cover; /* Ensures proper cropping */
         }
 
         /* Heading */
@@ -101,7 +99,7 @@
 
         <!-- Optional Footer -->
         <div class="footer">
-            <p>© 2025 | Erik Osgood</p>
+            <p>© 2025</p>
         </div>
     </div>
 
