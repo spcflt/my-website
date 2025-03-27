@@ -17,12 +17,17 @@
 
     <!-- Styles -->
     <style>
-        /* General page styling */
         body {
-            background: url('https://www.toptal.com/designers/subtlepatterns/uploads/memphis-mini-dark.png') repeat;
-            background-size: cover;
-            background-color: black; /* Fallback in case the image doesn't load */
-            color: white; /* Ensures text is readable */
+            background: url(https://www.toptal.com/designers/subtlepatterns/uploads/memphis-mini-dark.png) repeat; /* Ensure tiling */
+            background-size: auto; /* Keeps the pattern natural */
+            background-position: center; /* Ensures alignment */
+            background-color: black; /* Fallback */
+            color: white; /* Makes text readable */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ensures it takes full screen height */
+            margin: 0;
         }
 
         /* Container for content */
