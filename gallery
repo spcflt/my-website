@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QPNHSRH45M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QPNHSRH45M');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery</title>
+  <link rel="icon" href="https://i.imgur.com/yD4W2AO.png" type="image/png" />
+  <style>
+    body {
+        background: url(https://www.toptal.com/designers/subtlepatterns/uploads/memphis-mini-dark.png) repeat;
+        background-size: auto; /* Keeps the pattern natural */
+        background-position: center; /* Ensures alignment */
+        background-color: black;
+        font-family: Helvetica, Arial, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; /* Ensures it takes full screen height */
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      background: white;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .carousel-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .description {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #a3a8a7;
+      color: white;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #8e9492;
+    }
+
+    .footer {
+      margin-top: 20px;
+      font-size: 12px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PHOTO GALLERY</h1>
+    <img id="carousel-image" class="carousel-img" src="https://i.imgur.com/UbNVvGQ.jpeg" alt="Gallery Photo">
+    <p id="carousel-description" class="description">Preparing for complex ISS return operations at Cape Canaveral, FL</p>
+
+    <div class="controls">
+      <button class="btn" onclick="prevImage()">Previous</button>
+      <button class="btn" onclick="nextImage()">Next</button>
+    </div>
+
+    <div class="footer">
+      <a href="about.html" class="btn">BACK TO ABOUT</a>
+    </div>
+  </div>
+
+  <script>
+    const images = [
+      {
+        src: "blob:https://i.imgur.com/UbNVvGQ.jpeg",
+        desc: "Preparing for complex ISS return operations at Cape Canaveral, FL"
+      },
+      {
+        src: "blob:https://i.imgur.com/wF9r3I1.jpeg",
+        desc: "Historic Launch Complex 39B at Cape Canaveral, FL"
+      },
+      {
+        src: "blob:https://imgur.com/b4d22d78-6a82-4d05-a5c4-a540e693c511",
+        desc: "Viewing a SpaceX Starlink launch from up close"
+      },
+      {
+        src: "blob:https://i.imgur.com/C7H7dHZ.jpeg?2",
+        desc: "Getting to play around with ISS training simulators"
+      },      
+      {
+        src: "blob:https://i.imgur.com/I0on0YU.jpeg?2",
+        desc: "With some former colleagues, inside the ISS training module at Marshall Space Flight Center in Huntsville, AL"
+      },
+      {
+        src: "blob:https://i.imgur.com/MQad8zY.png",
+        desc: "My first role as a contractor at NASA, conducting scientific plant research at Ames Research Center, Moffett Field, CA"
+      }
+    ];
+
+    let index = 0;
+
+    function updateCarousel() {
+      const img = document.getElementById('carousel-image');
+      const desc = document.getElementById('carousel-description');
+      img.src = images[index].src;
+      desc.textContent = images[index].desc;
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      updateCarousel();
+    }
+
+    // Initialize
+    updateCarousel();
+  </script>
+</body>
+</html>
